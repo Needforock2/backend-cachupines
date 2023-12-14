@@ -1,9 +1,7 @@
 import { Router } from "express";
-import auth_router from "./auth.router.js";
-import cartsRouterDB from "./carts.routerDB.js";
-import productsRouterDB from "./products.routerDB.js";
+
 import ProductRouter from "./api/products.myrouter.js";
-import cookies_router from "./cookies.router.js";
+
 import sessions_router from "./sessions.router.js";
 import AuthRouter from "./api/auth.myrouter.js";
 import CartsRouter from "./api/carts.myrouter.js";

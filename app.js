@@ -1,22 +1,22 @@
 import "dotenv/config.js";
 import express from "express";
-import sessions from "./config/sessions/factory.js";
+import sessions from "./src/config/sessions/factory.js";
 import compression from "express-compression"
 import handlebars from "express-handlebars";
 import __dirname from "./utils.js";
 import { Server } from "socket.io";
-import Product from "./dao/mongo/models/product.js";
-import Cart from "./dao/mongo/models/cart.js";
+import Product from "./src/dao/mongo/models/product.js";
+import Cart from "./src/dao/mongo/models/cart.js";
 import cookieParser from "cookie-parser";
 import passport from "passport";
-import inicializePassport from "./middlewares/passport.js";
-import router from "./routes/index.js";
-import program from "./config/arguments.js";
-import config from "./config/env.js";
-import error_handler from "./middlewares/errorHandler.js";
-import winston from "./middlewares/winston.js";
-import not_found_handler from "./middlewares/not_found_handler.js";
-import swaggerOptions from "./config/swagger.js";
+import inicializePassport from "./src/middlewares/passport.js";
+import router from "./src/routes/index.js";
+import program from "./src/config/arguments.js";
+import config from "./src/config/env.js";
+import error_handler from "./src/middlewares/errorHandler.js";
+import winston from "./src/middlewares/winston.js";
+import not_found_handler from "./src/middlewares/not_found_handler.js";
+import swaggerOptions from "./src/config/swagger.js";
 import swaggerJSDoc from "swagger-jsdoc"
 import { serve, setup } from "swagger-ui-express"
 import cluster from "cluster";
