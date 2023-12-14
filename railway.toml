@@ -1,9 +1,9 @@
+[install]
+installCommand = "npm install"
+
 [build]
 builder = "nixpacks"
 buildCommand = "npm install"
-
-[install]
-installCommand = "npm install"
 
 [deploy]
 startCommand = "node app.js --mode prod"
