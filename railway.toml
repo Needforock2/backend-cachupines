@@ -1,21 +1,9 @@
-# Set the name of your app
-name = "cachuipines"
+[install]
+builder = "nixpacks"
+buildCommand = "npm install"
 
-# Define the services
-[services]
-  [services.app]
-  # Set the runtime to "node"
-  runtime = "node"
-
-  # Specify the build and start commands
-  install = "npm install"
-  start = "node app.js --mode prod"
-
-# Define the databases if needed
-# [databases]
-#   [databases.example]
-#   # Specify the database type and version
-#   type = "postgresql"
-#   version = "13"
-
-# Additional configuration can be added based on your project needs
+[deploy]
+startCommand = "node app.js --mode prod"
+healthcheckPath = "/"
+healthcheckTimeout = 100
+restartPolicyType = "never"
